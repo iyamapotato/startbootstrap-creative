@@ -6,11 +6,6 @@ header.masthead {
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  @media only screen and (max-device-width: 1366px) {
-    header.masthead {
-        background-attachment: scroll; //parralax doesnt work on mobile
-    }
-}
   // background-size: cover;
   @include background-cover;
   hr {
