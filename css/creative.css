@@ -180,7 +180,7 @@ header.masthead {
 }
 
 @media only screen and (max-device-width: 1366px) {
-  header.masthead .parallax {
+  header.masthead header.masthead {
     background-attachment: scroll;
   }
 }

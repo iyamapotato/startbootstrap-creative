@@ -7,7 +7,7 @@ header.masthead {
   background-attachment: fixed;
   background-repeat: no-repeat;
   @media only screen and (max-device-width: 1366px) {
-    .parallax {
+    header.masthead {
         background-attachment: scroll; //parralax doesnt work on mobile
     }
 }
