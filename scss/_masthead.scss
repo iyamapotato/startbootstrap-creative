@@ -1,9 +1,12 @@
 // Styling for the masthead
 header.masthead {
   padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
+  // padding-bottom: calc(10rem - 56px);
   background-image: url('../img/header.jpg');
   background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  // background-size: cover;
   @include background-cover;
   hr {
     margin-top: 30px;
