@@ -1,11 +1,16 @@
 // Styling for the masthead
 header.masthead {
   padding-top: 10rem;
-  // padding-bottom: calc(10rem - 56px);
+  padding-bottom: calc(10rem - 56px);
   background-image: url('../img/header.jpg');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  @media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll; //parralax doesnt work on mobile
+    }
+}
   // background-size: cover;
   @include background-cover;
   hr {

@@ -168,6 +168,7 @@ img::-moz-selection {
 
 header.masthead {
   padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
   background-image: url("../img/header.jpg");
   background-position: center center;
   background-attachment: fixed;
@@ -176,6 +177,12 @@ header.masthead {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  header.masthead .parallax {
+    background-attachment: scroll;
+  }
 }
 
 header.masthead hr {
