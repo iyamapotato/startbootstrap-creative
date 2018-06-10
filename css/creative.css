@@ -179,12 +179,6 @@ header.masthead {
   background-size: cover;
 }
 
-@media only screen and (max-device-width: 1366px) {
-  header.masthead header.masthead {
-    background-attachment: scroll;
-  }
-}
-
 header.masthead hr {
   margin-top: 30px;
   margin-bottom: 30px;
