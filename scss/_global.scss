@@ -78,10 +78,11 @@ img::-moz-selection {
   background: transparent;
 }
 
-* > .fas.fa-hover-show,
-*:hover > .fas.fa-hover-hide {
-  display: none;
-}
-*:hover > .fas.fa-hover-show {
-  display: inline-block;
-}
+// * > .fas.fa-hover-show,
+// *:hover > .fas.fa-hover-hide {
+//   display: none;
+// }
+
+// *:hover > .fas.fa-hover-show {
+//   display: inline-block;
+// }
