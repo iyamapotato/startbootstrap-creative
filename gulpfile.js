@@ -27,15 +27,24 @@ gulp.task('vendor', function() {
     ])
     .pipe(gulp.dest('./vendor/bootstrap'))
 
-  // Font Awesome
-  gulp.src([
-      './node_modules/font-awesome/**/*',
-      '!./node_modules/font-awesome/{less,less/*}',
-      '!./node_modules/font-awesome/{scss,scss/*}',
-      '!./node_modules/font-awesome/.*',
-      '!./node_modules/font-awesome/*.{txt,json,md}'
-    ])
-    .pipe(gulp.dest('./vendor/font-awesome'))
+  // // Font Awesome
+  // gulp.src([
+  //   './node_modules/@fortawesome/fontawesome-free/**/*',
+  //   '!./node_modules/@fortawesome/fontawesome-free/{less,less/*}',
+  //   '!./node_modules/@fortawesome/fontawesome-free/{scss,scss/*}',
+  //   '!./node_modules/@fortawesome/fontawesome-free/.*',
+  //   '!./node_modules/@fortawesome/fontawesome-free/*.{txt,json,md}'
+  // ])
+  // .pipe(gulp.dest('./vendor/font-awesome'))
+
+  // gulp.src([
+  //   './node_modules/font-awesome/**/*',
+  //   '!./node_modules/font-awesome/{less,less/*}',
+  //   '!./node_modules/font-awesome/{scss,scss/*}',
+  //   '!./node_modules/font-awesome/.*',
+  //   '!./node_modules/font-awesome/*.{txt,json,md}'
+  // ])
+  // .pipe(gulp.dest('./vendor/fart'))
 
   // jQuery
   gulp.src([
