@@ -171,6 +171,7 @@ header.masthead {
   padding-bottom: calc(10rem - 56px);
   background: transparent;
   background: transparent;
+  min-height: 400px;
 }
 
 header.masthead hr {
@@ -188,6 +189,7 @@ header.masthead p {
 
 @media (min-width: 768px) {
   header.masthead {
+    min-height: 400px;
     background: transparent;
   }
   header.masthead p {
@@ -210,6 +212,7 @@ header.masthead p {
 
 @media (min-width: 1200px) {
   header.masthead {
+    min-height: 400px;
     background: transparent;
   }
   header.masthead h1 {
