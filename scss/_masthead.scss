@@ -20,12 +20,14 @@ header.masthead {
     font-weight: 300;
   }
   @media (min-width: 768px) {
+    background: transparent;
     p {
       font-size: 1.15rem;
     }
   }
   @media (min-width: 992px) {
     height: 100vh;
+    background: transparent;
     min-height: 650px;
     padding-top: 0;
     padding-bottom: 0;
@@ -34,6 +36,7 @@ header.masthead {
     }
   }
   @media (min-width: 1200px) {
+    background: transparent;
     h1 {
       font-size: 4rem;
     }

@@ -190,6 +190,9 @@ header.masthead p {
 }
 
 @media (min-width: 768px) {
+  header.masthead {
+    background: transparent;
+  }
   header.masthead p {
     font-size: 1.15rem;
   }
@@ -198,6 +201,7 @@ header.masthead p {
 @media (min-width: 992px) {
   header.masthead {
     height: 100vh;
+    background: transparent;
     min-height: 650px;
     padding-top: 0;
     padding-bottom: 0;
@@ -208,6 +212,9 @@ header.masthead p {
 }
 
 @media (min-width: 1200px) {
+  header.masthead {
+    background: transparent;
+  }
   header.masthead h1 {
     font-size: 4rem;
   }
