@@ -80,6 +80,15 @@ img::-moz-selection {
   background: transparent;
 }
 
+* > .fas.fa-hover-show,
+*:hover > .fas.fa-hover-hide {
+  display: none;
+}
+
+*:hover > .fas.fa-hover-show {
+  display: inline-block;
+}
+
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: #fff;
