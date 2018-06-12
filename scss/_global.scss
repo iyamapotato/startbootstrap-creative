@@ -9,6 +9,16 @@ body {
   @include serif-font;
 }
 
+.fixed-bg {
+  background-image: url('../img/header.jpg');
+  position: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 hr {
   max-width: 50px;
   border-width: 3px;
