@@ -58,7 +58,17 @@ gulp.task('vendor', function() {
       './node_modules/jquery.easing/*.js'
     ])
     .pipe(gulp.dest('./vendor/jquery-easing'))
-    
+
+  //parallax maybe
+  gulp.src([
+      './node_modules/parallax-scroll/index.js'
+    ])  
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest('./vendor/parallax'))
+
   // Magnific Popup
   gulp.src([
       './node_modules/magnific-popup/dist/*'

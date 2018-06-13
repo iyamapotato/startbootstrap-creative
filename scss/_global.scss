@@ -23,6 +23,24 @@ body {
   background-attachment: fixed;
 }
 
+.pllax-bg{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  /**
+  * Adjust the height (or width), and offset the element's position based
+  * on the aspect of your images
+  */
+  // height: 110%;
+  // top: -5%;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  transform: translate3d(0, 0, 0);
+}
+
 // .fixed-bg {
 //   background-image: url('../img/header.jpg');
 //   position: fixed;

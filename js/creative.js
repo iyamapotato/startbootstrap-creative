@@ -56,6 +56,11 @@
     distance: '0px'
   }, 300);
 
+  parallax = new Parallax('.js-parallax', {
+    speed: 0.0, // Anything over 0.5 looks silly
+  });
+  parallax.animate();
+
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({
     delegate: 'a',

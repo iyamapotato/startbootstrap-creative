@@ -19,6 +19,20 @@ body {
   background-attachment: fixed;
 }
 
+.pllax-bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  /**
+  * Adjust the height (or width), and offset the element's position based
+  * on the aspect of your images
+  */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate3d(0, 0, 0);
+}
+
 hr {
   max-width: 50px;
   border-width: 3px;
