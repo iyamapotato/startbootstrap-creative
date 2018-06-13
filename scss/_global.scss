@@ -24,6 +24,9 @@ body {
 }
 
 .pllax-bg{
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  background-image: url("../img/header.jpg");
   position: absolute;
   width: 100%;
   left: 0;
