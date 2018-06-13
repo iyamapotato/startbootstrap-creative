@@ -19,8 +19,11 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-position: center;
-  background-size: cover;
+  background-position: center center;
+  background-size: cover !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   z-index: -10;
 }
 
@@ -203,6 +206,8 @@ img::-moz-selection {
 }
 
 header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
