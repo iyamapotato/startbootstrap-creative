@@ -76,7 +76,7 @@
 
 window.onload = function() {
 
-  // Alternate Background Page with scrolling content (Bg Pages are odd#s)
+  // Parallax switching bgrnds 
   var $bgImg = $('.bg-image');
   var winh = window.innerHeight;
   var scrollPos = 0;
