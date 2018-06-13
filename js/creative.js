@@ -56,11 +56,6 @@
     distance: '0px'
   }, 300);
 
-  parallax = new Parallax('.js-parallax', {
-    speed: 0.0, // Anything over 0.5 looks silly
-  });
-  parallax.animate();
-
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
@@ -78,3 +73,60 @@
   });
 
 })(jQuery); // End of use strict
+
+window.onload = function() {
+
+  // Alternate Background Page with scrolling content (Bg Pages are odd#s)
+  var $bgImg = $('.bg-image');
+  var winh = window.innerHeight;
+  var scrollPos = 0;
+  var page = 1;
+  var page1Bottom = winh;
+  var page3Top = winh;
+  var page3Bottom = winh * 3;
+  var page5Top = winh * 3;
+  var page5Bottom = winh * 5;
+
+  $(window).on('scroll', function() {
+
+    scrollPos = Number($(window).scrollTop().toFixed(2));
+    page = Math.floor(Number(scrollPos / winh) +1);
+    if (scrollPos >= 0 && scrollPos < page1Bottom ) {    
+      if (! $bgImg.hasClass('bg-img1')) {
+
+        removeBg( $bgImg, 2, 3, 1 ); // element, low, high, current
+        $bgImg.addClass('bg-img1');
+      }
+    } else if (scrollPos >= page3Top && scrollPos <= page3Bottom) {
+      if (! $bgImg.hasClass('bg-img2')) {
+
+        removeBg( $bgImg, 1, 3, 2 ); // element, low, high, current
+        $bgImg.addClass('bg-img2');
+      }
+    } else if (scrollPos >= page5Top && scrollPos <= page5Bottom) {
+      if (! $bgImg.hasClass('bg-img3')) {
+
+        removeBg( $bgImg, 1, 2, 3 ); // element, low, high, current
+        $bgImg.addClass('bg-img3');
+      }
+    }
+    $nav.html("Page# " + page + " window position: " + scrollPos);
+
+  });
+}
+
+// This function was created to fix a problem where the mouse moves off the
+// screen, this results in improper removal of background image class. Fix
+// by removing any background class not applicable to current page.
+function removeBg( el, low, high, current ) {
+  if (low > high || low <= 0 || high <= 0) {
+    console.log ("bad low/high parameters in removeBg");
+  }
+  for (var i=low; i<=high; i++) {
+    if ( i != current ) { // avoid removing class we are trying to add
+      if (el.hasClass('bg-img' +i )) {
+        el.removeClass('bg-img' +i );
+      }
+    }
+  } 
+} // removeBg()

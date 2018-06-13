@@ -1,6 +1,7 @@
 // Global styling for this template
 body,
 html {
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -9,50 +10,34 @@ body {
   @include serif-font;
 }
 
-.fixed-bg{
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background-position: center center;
-  background-repeat: no-repeat;
-  width: 100%;
-  // display: block;
-  // height: auto;
-  background-size: cover;  
-  // padding-left: 0px;
-  background-image: url("../img/orange.jpg");
-  background-attachment: fixed;
-}
-
-.pllax-bg{
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background-image: url("../img/header.jpg");
-  position: absolute;
-  width: 100%;
+.bg-image::before{
+  position: fixed;
+  content: ' ';
+  display: block;
+  width: 100vw;
+  min-height: 100vh;  
+  top: 0;
+  bottom: 0;
   left: 0;
-  /**
-  * Adjust the height (or width), and offset the element's position based
-  * on the aspect of your images
-  */
-  // height: 110%;
-  // top: -5%;
-
-  background-position: center center;
-  background-repeat: no-repeat;
+  right: 0;
+  background-position: center;
   background-size: cover;
-
-  transform: translate3d(0, 0, 0);
+  z-index: -10; 
 }
 
-// .fixed-bg {
-//   background-image: url('../img/header.jpg');
-//   position: fixed;
-//   background-position: center;
-//   background-size: cover;
-//   width: 100%;
-//   height: 100%;
-//   z-index: -1;
-// }
+* {
+  box-sizing: border-box;
+}
+
+.bg-img1:before {
+      background-image: url("../img/header.jpg");
+}
+.bg-img2::before {
+      background-image: url("../img/orange.jpg");
+}
+.bg-img3::before {
+      background-image: url("../img/orange.jpg");
+}
 
 hr {
   max-width: 50px;
@@ -89,6 +74,10 @@ h6 {
   background-color: $gray-900 !important;
 }
 
+.bg-white {
+  background-color: $white !important;
+}
+
 .text-faded {
   color: fade-out($white, .3);
 }
@@ -122,12 +111,3 @@ img::-moz-selection {
   color: $white;
   background: transparent;
 }
-
-// * > .fas.fa-hover-show,
-// *:hover > .fas.fa-hover-hide {
-//   display: none;
-// }
-
-// *:hover > .fas.fa-hover-show {
-//   display: inline-block;
-// }

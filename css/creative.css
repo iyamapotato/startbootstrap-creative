@@ -1,5 +1,6 @@
 body,
 html {
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -8,32 +9,35 @@ body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 
-.fixed-bg {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background-position: center center;
-  background-repeat: no-repeat;
-  width: 100%;
+.bg-image::before {
+  position: fixed;
+  content: ' ';
+  display: block;
+  width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position: center;
   background-size: cover;
-  background-image: url("../img/orange.jpg");
-  background-attachment: fixed;
+  z-index: -10;
 }
 
-.pllax-bg {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
+* {
+  box-sizing: border-box;
+}
+
+.bg-img1:before {
   background-image: url("../img/header.jpg");
-  position: absolute;
-  width: 100%;
-  left: 0;
-  /**
-  * Adjust the height (or width), and offset the element's position based
-  * on the aspect of your images
-  */
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transform: translate3d(0, 0, 0);
+}
+
+.bg-img2::before {
+  background-image: url("../img/orange.jpg");
+}
+
+.bg-img3::before {
+  background-image: url("../img/orange.jpg");
 }
 
 hr {
@@ -72,6 +76,10 @@ h6 {
 
 .bg-dark {
   background-color: #212529 !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
 }
 
 .text-faded {
@@ -195,12 +203,6 @@ img::-moz-selection {
 }
 
 header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url("../img/header.jpg");
-  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

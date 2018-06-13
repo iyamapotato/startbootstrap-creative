@@ -1,11 +1,16 @@
 header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background-position: center center;
-  background-repeat: no-repeat;
-  // background: transparent;
-  background-image: url("../img/header.jpg");
-  background-attachment: fixed;
+  // padding-top: 10rem;
+  // padding-bottom: calc(10rem - 56px);
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  // // background: transparent;
+  // background-image: url("../img/header.jpg");
+  // background-attachment: fixed;
+  // z-index: -9;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
 
   @include background-cover;
   hr {
