@@ -5,6 +5,11 @@ html {
   height: 100%;
 }
 
+.athird {
+  margin-top: 23vh;
+  margin-bottom: 0vh;
+}
+
 body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -206,8 +211,6 @@ img::-moz-selection {
 }
 
 header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
   height: 100vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;

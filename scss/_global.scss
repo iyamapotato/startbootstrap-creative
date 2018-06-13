@@ -6,6 +6,11 @@ html {
   height: 100%;
 }
 
+.athird {
+  margin-top: 23vh;
+  margin-bottom: 0vh;
+}
+
 body {
   @include serif-font;
 }
