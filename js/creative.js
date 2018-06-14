@@ -78,7 +78,7 @@ window.onload = function() {
 
   // Parallax switching bgrnds 
   var $bgImg = $('.bg-image');
-  var winh = documentElement.clientHeight;
+  var winh = window.innerHeight;
   //used to be window.innerHeight
   var scrollPos = 0;
   var page = 1;
