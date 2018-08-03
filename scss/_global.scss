@@ -75,6 +75,11 @@ h6 {
   @include sans-serif-font;
 }
 
+.bg-primary-trans {
+  background: rgb(0, 191, 255) !important; /* Fallback */
+  background: rgba(0,191,255, 0.75) !important;
+}
+
 .bg-primary {
   background-color: $primary !important;
 }
